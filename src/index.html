@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <header>
+      <div class="container header-container">
+        <nav class="header-nav">
+          <div class="logo">
+            <a href="./index.html">
+              <!-- <img src="" alt="Company logo" class="logo__img" width="" /> -->
+            </a>
+            <span class="logo__name">Filmoteka </span>
+          </div>
+          <ul class="header-nav__menu">
+            <li class="header-nav__item">
+              <a href="./index.html" class="header-nav__link">HOME</a>
+            </li>
+            <li class="header-nav__item">
+              <a href="" class="header-nav__link">MY LIBRARY</a>
+            </li>
+          </ul>
+        </nav>
+        <input type="text" />
+      </div>
+    </header>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
