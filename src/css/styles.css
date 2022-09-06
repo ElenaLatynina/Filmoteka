@@ -1,3 +1,10 @@
 .header-container{
-    background-image: url(../images/Rectangle\ 1.png);
+    background-color:rgba(0, 0, 0, 0.56) ;
+   
+    background-image:url(../images/background-red-lines\ .jpg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    margin: 0 auto;
 }
