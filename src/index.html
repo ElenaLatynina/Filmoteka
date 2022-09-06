@@ -15,7 +15,7 @@
                 src="./images/film.png"
                 alt="Company logo"
                 class="logo__img"
-                width=""
+                width="24px"
               />
             </a>
             <span class="logo__name">Filmoteka </span>
@@ -29,9 +29,59 @@
             </li>
           </ul>
         </nav>
-        <input type="text" />
+        <div class="form__field">
+          <input type="text" class="input" />
+          <svg class="form__icon" width="12px" height="12px">
+            <use href="./images/search 2.svg"></use>
+          </svg>
+        </div>
       </div>
     </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h2 hidden>фильмы</h2>
+          <ul class="examples__list">
+            <li class="examples__item">
+              <a href="" class="examples__link">
+                <div class="exampls__thumb">
+                  <picture>
+                    <source
+                      srcset="
+                        ./Images/img1_lg.jpg    1x,
+                        ./Images/img1_lg@2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./Images/img1_md.jpg    1x,
+                        ./Images/img1_md@2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./Images/img1_sm.jpg    1x,
+                        ./Images/img1_sm@2x.jpg 2x
+                      "
+                      media="(min-width:480px)"
+                      type="image/jpeg"
+                    />
+                    <img src="./Images/img1_sm.jpg" alt="Greyhound" />
+                  </picture>
+                </div>
+              </a>
+            </li>
+            <li class="list__item"></li>
+            <li class="list__item"></li>
+            <li class="list__item"></li>
+          </ul>
+        </div>
+      </section>
+    </main>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
