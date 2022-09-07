@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Document</title>
+    <title>My Library</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
-      <div class="container header-container">
+      <div class="container header-container__library">
         <nav class="header-nav">
           <div class="logo">
             <a href="./index.html">
@@ -30,12 +30,15 @@
             </li>
           </ul>
         </nav>
-        <div class="form__field">
-          <input type="text" class="input" />
-          <svg class="form__icon" width="12px" height="12px">
-            <use href="./images/search 2.svg"></use>
-          </svg>
-        </div>
+        <ul class="library__buttons">
+          <li class="library__buttons__item"><button type="button" class="button">
+            <span class="button__text">Watched</span>
+          </button></li>
+          <li class="library__buttons__item"></li>><button type="button" class="button">
+            <span class="button__text">QUEUE</span>
+          </button></li>
+          
+        </ul>
       </div>
     </header>
     <main>

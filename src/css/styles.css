@@ -14,7 +14,7 @@
 .header-nav{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 
@@ -22,6 +22,7 @@
     padding-top: 40px;
     padding-left: 32px;
     padding-right: 32px;
+    padding-bottom: 60px;
    
     background-color:rgba(0, 0, 0, 0.56) ;
     background-image:url(../images/background-red-lines\ .jpg);
@@ -86,4 +87,116 @@
 
 .form__icon{
     fill: white;
+}
+/* ====================Gallery+++++++++ */
+
+/* 
+.examples__item{
+    border-bottom: 1px solid #eeeeee;
+    
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        flex-basis: calc(100%/2 - 32px);
+        margin-top: 32px;
+        margin-left: 32px;
+        
+    }
+    
+    @media screen and(min-width:1200px) {
+        flex-basis: calc(100%/3 - 32px);
+        margin-top: 32px;
+        margin-left: 32px;
+
+    }
+   
+} */
+/* 
+@media screen and (max-width:767px){
+    .examples__item:not(:last-child){
+        margin-bottom: 30px;
+    }
+} */
+.examples__link{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+   
+}
+
+.examples__content{
+    flex-grow: 1;
+    border:1px solid #ece2e2;
+    border-top: none;
+    /* padding: 20px 24px; */
+}
+
+
+.examples__name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.examples__type{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+color: #FF6B08;
+
+}
+
+
+/* ++++++++++++library+++++ */
+.header-container__library{
+    display: block;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 60px;
+
+    background-color: rgba(0, 0, 0, 0.56);
+    background-image: url(../images/Library_lg.jpg);
+    opacity: 0.9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.library__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    
+
+}
+.button{
+    width: 148px;
+    height: 42px;
+    background-color:transparent;
+    border:1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: (0px 8px 43px rgba(255, 107, 1, 0.6));
+}
+.button__text{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
