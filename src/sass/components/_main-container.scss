@@ -1,0 +1,229 @@
+.main-container {
+    @include mobile {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.card-list,
+.my-library__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 20px;
+
+    @include tablet {
+        gap: 32px;
+    }
+
+    @include desktop {
+        gap: 32px;
+    }
+}
+
+.card-list__item {
+    display: block;
+    width: 100%;
+    border-radius: 3% 3% 2% 2%;
+    overflow: hidden;
+    box-shadow: 15px 0px 8px 3px rgba(50, 50, 50, 0.75);
+    cursor: pointer;
+
+    @include tablet {
+        flex: calc((100% / 2) - 1rem\2);
+        width: 336px;
+
+        transition-property: transform;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+
+    @include desktop {
+        flex: none;
+        width: 378px;
+    }
+}
+
+.card-list_picture,
+.img-stub__picture {
+    width: 100%;
+
+    @include tablet {
+        width: 336px;
+    }
+
+    @include desktop {
+        width: 394px;
+        height: 575px;
+    }
+}
+
+.card-list__title,
+.img-stub__title {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    text-transform: uppercase;
+
+    color: rgba(255, 107, 8, 1);
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+}
+
+.card-list__movie-name {
+    display: block;
+
+    color: #000000;
+}
+
+.card-list__genre {
+    @include desktop {
+        font-size: 15px;
+    }
+}
+
+.card-list__ratimg {
+    display: inline-block;
+    width: 36px;
+    padding: 1px 0px;
+    margin-left: 8px;
+    align-items: center;
+
+    border-radius: 5px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffffff;
+    background-color: rgba(255, 107, 8, 1);
+
+    @include desktop {
+        width: 40px;
+        padding: 3px 0px;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+}
+
+.filmoteka__button {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 11px 13px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 1.33;
+    color: inherit;
+    color: $color--accent-text;
+    border-color: $color--selected-page;
+    background-color: $color--selected-page;
+    border-radius: 5px;
+
+    @include mobile {
+        margin-top: 20px;
+    }
+
+    @include tablet {
+        margin-top: 60px;
+    }
+}
+
+#tui-pagination-container .tui-first,
+#tui-pagination-container .tui-last,
+#tui-pagination-container .tui-icon-prev,
+#tui-pagination-container .tui-last-child {
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        display: inline;
+    }
+}
+
+#tui-pagination-container strong {
+    background: #ff6b08;
+    border-color: $color--selected-page;
+}
+
+#tui-pagination-container .tui-page-btn {
+    width: 40px;
+    height: 40px;
+    padding: 13px 11px;
+    border-color: transparent;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+}
+
+.animated-card {
+    animation: cardbeat 0.6s infinite;
+    opacity: 0.8;
+    transition-property: transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @keyframes cardbeat {
+        0% {
+            transform: scale(0.8);
+            opacity: 0.7;
+        }
+
+        20% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
+
+        40% {
+            transform: scale(1.2);
+            opacity: 0.5;
+        }
+
+        60% {
+            transform: scale(1.3);
+            opacity: 0.4;
+        }
+
+        80% {
+            transform: scale(1.4);
+            opacity: 0.4;
+        }
+    }
+}
+
+#tui-pagination-container {
+    height: 44px;
+    width: 280px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 10px 8px 8px 6px rgba(163, 162, 162, 0.75);
+    filter: brightness(0.8) contrast(1.2);
+
+    @include tablet {
+        width: 460px;
+    }
+}

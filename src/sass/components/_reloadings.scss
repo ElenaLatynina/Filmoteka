@@ -1,0 +1,9 @@
+.reloading {
+    position: relative;
+    height: 103px;
+    padding-top: 60px;
+
+    &.is-hidden {
+        display: none;
+    }
+}
