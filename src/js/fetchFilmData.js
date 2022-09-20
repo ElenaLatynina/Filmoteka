@@ -9,7 +9,7 @@ export async function fetchFilmData({ page = 1, query = '', isSearch = false }) 
 	const BASE_URL = 'https://api.themoviedb.org/3/';
 	const URL_PATH = !isSearch ? 'trending/movie/day' : 'search/movie';
 
-	const searchParam = new URLSearchParams({ api_key: 'ad24807293275bef83ede161311e71e0', page, query });
+	const searchParam = new URLSearchParams({ api_key: '07365d3730901c9189566ffe38d9d5bb', page, query });
 
 	return await axios
 		.get(`${BASE_URL}${URL_PATH}?${searchParam}`)
