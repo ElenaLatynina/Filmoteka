@@ -4,8 +4,7 @@ import { isInLib } from './isInLib';
 // Defolt:разметка для страницы Home
 // для страницы Library изменить парамеир 'isLibrary' (число) на true при вызове функции isLib(2й параметр)
 
-export function  createFilmCard ({ id, vote_average, release_date, poster_path, title, genre_ids, original_title }, isLibrary = false) => {
-	const BASE_URL = 'https://image.tmdb.org/t/p/';
+export function createFilmCard({ id, vote_average, release_date, poster_path, title, genre_ids, original_title }, isLibrary = false)  {const BASE_URL = 'https://image.tmdb.org/t/p/';
 	const rating = isLibrary ? `<p class="filmCard-rating">${vote_average ? vote_average.toFixed(1) : '-'}</p>` : '';
 
 	const imgSrc = width => {
@@ -28,8 +27,9 @@ export function  createFilmCard ({ id, vote_average, release_date, poster_path, 
     <p class="filmCard-genres">${genre_ids ? getFilmGenres(genre_ids) : 'Genre: -'}</p>
     <p class="filmCard-release">${release_date ? release_date.slice(0, 4) : 'Release date: -'}</p>${rating}
   </div>${libLabel}
-</article>`;
-};
+</article>`; }
+	
+
 
 export function getFilmGenres(genre_ids, isInModal = false) {
 	const genresList = fetchDataFromStorage('genres');
@@ -44,7 +44,7 @@ export function getFilmGenres(genre_ids, isInModal = false) {
 
 	if (genres.length && isInModal) return genres.join(', ')
 	else if (!genres.length && isInModal) return '-';
-	if (genres.length && genres.length <= 2) return genres.join(', ');
+	if (genres.length <= 2) return genres.join(', ');
 	else if (genres.length > 2) return `${genres[0]}, ${genres[1]}, Other`;
 	else return 'Genre: -';
 }
