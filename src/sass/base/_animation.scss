@@ -1,0 +1,15 @@
+
+
+
+.button,
+#toTop {
+    animation: glowing 1300ms infinite;
+}
+
+.program__list::after {
+    animation: glowing 1300ms infinite;
+}
+
+.accent-text {
+    animation: glowing-text 1300ms infinite;
+}
